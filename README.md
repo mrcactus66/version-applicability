@@ -13,7 +13,9 @@ version and deployment description. Anyone may trigger the immutable review.
 
 GenLayer validators independently read the advisory and interpret its complete
 affected ranges and deployment prerequisites. They check the leader's verbatim
-witnesses and extract their own facts. Scope decisions, all bounds and inclusivity
+witnesses and extract their own facts. Whitespace-only quote reflow is mapped back
+to the contiguous original source span before storage; words and punctuation must
+still match exactly. Scope decisions, all bounds and inclusivity
 flags must agree. Quote wording itself is not compared for equality.
 
 Code then compares numeric version tuples; it does not ask the model to decide
@@ -49,7 +51,7 @@ new review. Reports are capped at 16 KB, ranges at four, inventory at eight.
 
 ## Run locally
 
-Python 3.13 was used for 54 direct-mode tests and the GenVM linter/SDK validation.
+Python 3.13 was used for 56 direct-mode tests and the GenVM linter/SDK validation.
 Tests use actual SDK storage and mocked external responses, including numeric
 boundaries, disjoint branches, uncertain prerequisites, retry behavior, fake
 witnesses and independent validator disagreement. These are not live consensus

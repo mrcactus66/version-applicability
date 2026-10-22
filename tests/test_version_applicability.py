@@ -205,3 +205,18 @@ def test_duplicate_inventory_and_wrong_repository_rejected(contract, direct_vm):
     p = policy(); p["source"]["url"] = URL.replace(REPO, "other/repository")
     with direct_vm.expect_revert("pinned"):
         contract.register("case", json.dumps(p))
+
+
+def test_reflowed_quote_restores_exact_source_span(contract, direct_vm):
+    row = evidence(); row["range_quote"] = " ".join(RANGE_QUOTE.split())
+    setup(contract, direct_vm, row=row)
+    result = review(contract)
+    assert result["evidence"]["range_quote"] == RANGE_QUOTE
+    assert direct_vm.run_validator() is True
+
+
+def test_reflow_does_not_allow_changed_punctuation_or_words(contract, direct_vm):
+    row = evidence(); row["range_quote"] = RANGE_QUOTE.replace("not including", "including")
+    setup(contract, direct_vm, row=row)
+    with direct_vm.expect_revert("Quote must occur"):
+        review(contract)

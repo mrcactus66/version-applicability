@@ -9,12 +9,14 @@ import json
 from pathlib import Path
 import subprocess
 import sys
+import time
 
 from eth_account import Account
 from genlayer_py.client import GenLayerClient
 from genlayer_py.chains import studionet
 from genlayer_py.provider import GenLayerProvider
 from genlayer_py.abi import calldata
+from web3 import Web3
 import requests
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -29,12 +31,34 @@ account = Account.from_key(key_file.read_text(encoding="ascii"))
 
 
 class StudioProvider(GenLayerProvider):
+    def __init__(self, url):
+        super().__init__(url)
+        self.session = requests.Session()
+
     def make_request(self, method, params):
-        response = requests.post(self.url, json={"jsonrpc": "2.0", "id": 1,
-            "method": method, "params": params}, timeout=(15, 30))
-        response.raise_for_status()
-        value = response.json()
+        reads = {"eth_chainId", "eth_getTransactionCount", "eth_getBlockByNumber",
+            "eth_estimateGas", "eth_getTransactionReceipt", "eth_getTransactionByHash",
+            "eth_call", "eth_getBalance", "gen_call"}
+        journal = None
+        if method == "eth_sendRawTransaction":
+            journal = {"evm_transaction_hash": Web3.to_hex(Web3.keccak(hexstr=params[0])),
+                       "state": "BROADCAST_OUTCOME_UNKNOWN"}
+            (LOCAL / "last-broadcast.json").write_text(json.dumps(journal), encoding="utf-8")
+        for attempt in range(3 if method in reads else 1):
+            try:
+                response = self.session.post(self.url, json={"jsonrpc": "2.0", "id": 1,
+                    "method": method, "params": params}, timeout=(15, 30))
+                response.raise_for_status()
+                value = response.json()
+                break
+            except (requests.RequestException, ValueError):
+                if method not in reads or attempt == 2:
+                    raise
+                time.sleep(attempt + 1)
         self._raise_on_error(value, method)
+        if journal is not None:
+            journal.update(state="RPC_ACCEPTED", result=value.get("result"))
+            (LOCAL / "last-broadcast.json").write_text(json.dumps(journal), encoding="utf-8")
         return value
 
 
@@ -88,7 +112,7 @@ elif command in ("inspect", "wait"):
             (LOCAL / "contract.address").write_text(raw["to_address"], encoding="ascii")
     save(tx + "-receipt.json", public)
     print(json.dumps({k: v for k, v in public.items() if k in (
-        "hash", "to_address", "status_name", "result_name", "rotation_count", "executions")}, indent=2))
+        "hash", "to_address", "status_name", "result_name", "rotation_count")}, indent=2))
 elif command in ("register", "review", "read"):
     case = sys.argv[2]
     settings = CONFIG["cases"][case]

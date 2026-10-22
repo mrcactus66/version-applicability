@@ -1,0 +1,7 @@
+{
+  "network": "StudioNet",
+  "chain_id": 61999,
+  "transaction_id": "0x67671832a675b5f416de52c1f3229f78f969c2de2218f2678905f2a91c25f069",
+  "demo_account": "0xdc072EEB18F6ADff2d810f139Cd07929B7E1338F",
+  "recovery": "Original deployment recovered from Studio Explorer account history after EVM receipt read failed."
+}

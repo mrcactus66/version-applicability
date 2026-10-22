@@ -33,14 +33,29 @@ def source_check(source: dict, repository: str) -> None:
         raise gl.vm.UserError("Expected pinned repository URL and SHA-256")
 
 
+def source_excerpt(body: str, quote: str, limit: int) -> str:
+    if not isinstance(quote, str) or len(quote) > limit:
+        raise gl.vm.UserError("Quote outside bounds")
+    if not quote:
+        return ""
+    # Models sometimes wrap the same sentence differently. Resolve only whitespace
+    # differences back to a contiguous original span; never edit words or punctuation.
+    parts = re.split(r"\s+", quote.strip())
+    if not parts or not parts[0]:
+        raise gl.vm.UserError("Empty quote")
+    match = re.search(r"\s+".join(re.escape(p) for p in parts), body)
+    if match is None or len(match.group()) > limit:
+        raise gl.vm.UserError("Quote must occur verbatim apart from whitespace")
+    return match.group()
+
+
 def check_result(policy: dict, body: str, result: typing.Any) -> None:
     if not isinstance(result, dict) or set(result) != {"coverage", "ranges", "range_quote", "items"}:
         raise gl.vm.UserError("Invalid extraction fields")
     if result["coverage"] not in ("EXACT", "UNSUPPORTED", "UNKNOWN"):
         raise gl.vm.UserError("Invalid range coverage")
-    quote = result["range_quote"]
-    if not isinstance(quote, str) or len(quote) > 1600 or (quote and quote not in body):
-        raise gl.vm.UserError("Range quote must occur verbatim")
+    quote = source_excerpt(body, result["range_quote"], 1600)
+    result["range_quote"] = quote
     ranges = result["ranges"]
     if not isinstance(ranges, list) or len(ranges) > 4:
         raise gl.vm.UserError("Too many ranges")
@@ -81,9 +96,8 @@ def check_result(policy: dict, body: str, result: typing.Any) -> None:
             raise gl.vm.UserError("Invalid item identity")
         if row["scope"] not in ("APPLIES", "DOES_NOT_APPLY", "UNKNOWN"):
             raise gl.vm.UserError("Invalid applicability")
-        q = row["quote"]
-        if not isinstance(q, str) or len(q) > 1200 or (q and q not in body):
-            raise gl.vm.UserError("Scope quote must occur verbatim")
+        q = source_excerpt(body, row["quote"], 1200)
+        row["quote"] = q
         if row["scope"] != "UNKNOWN" and len(q) < 12:
             raise gl.vm.UserError("Missing applicability evidence")
 

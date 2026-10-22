@@ -1,0 +1,119 @@
+{
+  "hash": "0x91f8aab2612db679b050d48cbe7634447d6290c473e4c63821e5aa2af60caf99",
+  "from_address": "0xdc072EEB18F6ADff2d810f139Cd07929B7E1338F",
+  "to_address": "0x78Cbc71C3EC3e7FC8D3A66439cBfA19F4Ff04459",
+  "value": 0,
+  "type": 2,
+  "status_name": "UNDETERMINED",
+  "result_name": "NO_MAJORITY",
+  "leader_only": false,
+  "rotation_count": 3,
+  "num_of_rounds": "4",
+  "last_round": {
+    "round": "3",
+    "leader_index": "0",
+    "votes_committed": "4",
+    "votes_revealed": "4",
+    "appeal_bond": "0",
+    "rotations_left": "0",
+    "result": 5,
+    "round_validators": [
+      "0x5Bbbd7cdD63c0ba7f088038Cb049bDDAbE4F6fd1",
+      "0x9244De5F20cB75A0c51d79A9A3208D00a99aFc10",
+      "0xb0925568bFbCF00aADBcA053E6D0E1628ff3d530",
+      "0x8Ce1805d6970d54748dE7160b5b395dCC5c71F44"
+    ],
+    "validator_votes_hash": [
+      "0x81cea4c1723137a0a43ab9371f1d8f837ade8d45b60d38777c55a4bd94605e10",
+      "0x2aa4140ffead302b5aff8dd6da18dd0d2400ef199f3f0f586e6cfdd8960b8bba",
+      "0x35726dbfa667a4aa02187d626e7fd3ddcdab8f149748bf01244d458e45fb4112",
+      "0x892e09714ce80cd6d647c040ca16fe7397bec83965216ca63657fa68108cc644"
+    ],
+    "validator_votes": [
+      1,
+      2,
+      1,
+      2
+    ],
+    "validator_votes_name": [
+      "AGREE",
+      "DISAGREE",
+      "AGREE",
+      "DISAGREE"
+    ]
+  },
+  "explorer": "https://explorer-studio.genlayer.com/tx/0x91f8aab2612db679b050d48cbe7634447d6290c473e4c63821e5aa2af60caf99",
+  "executions": [
+    {
+      "mode": "leader",
+      "vote": null,
+      "execution_result": "SUCCESS",
+      "genvm_result": {
+        "stderr": "",
+        "stdout": "",
+        "raw_error": null,
+        "error_code": null,
+        "error_description": null
+      },
+      "nondet_disagree": null,
+      "contract_state_hash": "ce1cc2c7dd136b1ff1d036bd56f8072c03ad6eb166b7638d234fed7304704b2b"
+    },
+    {
+      "mode": "validator",
+      "vote": "agree",
+      "execution_result": "SUCCESS",
+      "genvm_result": {
+        "stderr": "",
+        "stdout": "",
+        "raw_error": null,
+        "error_code": null,
+        "error_description": null
+      },
+      "nondet_disagree": null,
+      "contract_state_hash": "ce1cc2c7dd136b1ff1d036bd56f8072c03ad6eb166b7638d234fed7304704b2b"
+    },
+    {
+      "mode": "validator",
+      "vote": "disagree",
+      "execution_result": "SUCCESS",
+      "genvm_result": {
+        "stderr": "",
+        "stdout": "",
+        "raw_error": null,
+        "error_code": null,
+        "error_description": null
+      },
+      "nondet_disagree": 0,
+      "contract_state_hash": "ce1cc2c7dd136b1ff1d036bd56f8072c03ad6eb166b7638d234fed7304704b2b"
+    },
+    {
+      "mode": "validator",
+      "vote": "agree",
+      "execution_result": "SUCCESS",
+      "genvm_result": {
+        "stderr": "",
+        "stdout": "",
+        "raw_error": null,
+        "error_code": null,
+        "error_description": null
+      },
+      "nondet_disagree": null,
+      "contract_state_hash": "ce1cc2c7dd136b1ff1d036bd56f8072c03ad6eb166b7638d234fed7304704b2b"
+    },
+    {
+      "mode": "validator",
+      "vote": "disagree",
+      "execution_result": "SUCCESS",
+      "genvm_result": {
+        "stderr": "",
+        "stdout": "",
+        "raw_error": null,
+        "error_code": null,
+        "error_description": null
+      },
+      "nondet_disagree": 0,
+      "contract_state_hash": "ce1cc2c7dd136b1ff1d036bd56f8072c03ad6eb166b7638d234fed7304704b2b"
+    }
+  ],
+  "calldata": "{\"args\":[\"branches\"],\"method\":\"review\"}"
+}
