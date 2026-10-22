@@ -220,3 +220,16 @@ def test_reflow_does_not_allow_changed_punctuation_or_words(contract, direct_vm)
     setup(contract, direct_vm, row=row)
     with direct_vm.expect_revert("Quote must occur"):
         review(contract)
+
+
+@pytest.mark.parametrize("suffix,accepted", [(". This is a sentence.", True), (".1", False), ("-rc.1", False), ("+build", False)])
+def test_endpoint_can_end_a_sentence_but_not_a_longer_version(contract, direct_vm, suffix, accepted):
+    body = "AsterCache is affected from 2.4.0 up to but not including 2.4.7" + suffix + "\n" + SCOPE_QUOTE
+    row = evidence(); row["ranges"] = row["ranges"][:1]; row["range_quote"] = body.splitlines()[0]
+    setup(contract, direct_vm, p=policy(body), row=row, body=body)
+    if accepted:
+        assert review(contract)["items"][1]["status"] == "OUTSIDE_REPORTED_RANGE"
+        assert direct_vm.run_validator() is True
+    else:
+        with direct_vm.expect_revert("exact anchor"):
+            review(contract)

@@ -51,7 +51,7 @@ new review. Reports are capped at 16 KB, ranges at four, inventory at eight.
 
 ## Run locally
 
-Python 3.13 was used for 56 direct-mode tests and the GenVM linter/SDK validation.
+Python 3.13 was used for 60 direct-mode tests and the GenVM linter/SDK validation.
 Tests use actual SDK storage and mocked external responses, including numeric
 boundaries, disjoint branches, uncertain prerequisites, retry behavior, fake
 witnesses and independent validator disagreement. These are not live consensus

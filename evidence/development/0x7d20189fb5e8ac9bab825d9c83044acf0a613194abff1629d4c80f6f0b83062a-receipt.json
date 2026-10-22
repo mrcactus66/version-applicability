@@ -1,0 +1,27 @@
+{
+  "hash": "0x7d20189fb5e8ac9bab825d9c83044acf0a613194abff1629d4c80f6f0b83062a",
+  "from_address": "0xdc072EEB18F6ADff2d810f139Cd07929B7E1338F",
+  "to_address": "0xb7278A61aa25c888815aFC32Ad3cC52fF24fE575",
+  "value": 0,
+  "type": 0,
+  "status_name": "FINALIZED",
+  "result_name": "NO_MAJORITY",
+  "leader_only": false,
+  "rotation_count": 0,
+  "num_of_rounds": "0",
+  "last_round": {
+    "round": "0",
+    "leader_index": "0",
+    "votes_committed": "0",
+    "votes_revealed": "0",
+    "appeal_bond": "0",
+    "rotations_left": "3",
+    "result": 5,
+    "round_validators": [],
+    "validator_votes_hash": [],
+    "validator_votes": [],
+    "validator_votes_name": []
+  },
+  "explorer": "https://explorer-studio.genlayer.com/tx/0x7d20189fb5e8ac9bab825d9c83044acf0a613194abff1629d4c80f6f0b83062a",
+  "executions": []
+}

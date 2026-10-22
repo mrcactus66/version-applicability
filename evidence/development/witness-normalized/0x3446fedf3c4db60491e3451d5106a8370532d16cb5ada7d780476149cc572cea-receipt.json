@@ -1,0 +1,146 @@
+{
+  "hash": "0x3446fedf3c4db60491e3451d5106a8370532d16cb5ada7d780476149cc572cea",
+  "from_address": "0xdc072EEB18F6ADff2d810f139Cd07929B7E1338F",
+  "to_address": "0xbF3b79eB2550f6265CC979e46b1096557a3B337A",
+  "value": 0,
+  "type": 2,
+  "status_name": "ACCEPTED",
+  "result_name": "MAJORITY_AGREE",
+  "leader_only": false,
+  "rotation_count": 0,
+  "num_of_rounds": "1",
+  "last_round": {
+    "round": "0",
+    "leader_index": "0",
+    "votes_committed": "5",
+    "votes_revealed": "5",
+    "appeal_bond": "0",
+    "rotations_left": "3",
+    "result": 6,
+    "round_validators": [
+      "0xa21bc502E3578E4b3039be8c59a257198f7c3f19",
+      "0xad7d13f269CeAd4379E64a1A3a0803a827e70B43",
+      "0xf29b6947ed298d139FC2655DB15D868C9AbB3091",
+      "0x2FcBC452425f2F1e102c5c04b4331fcB46ee1c00",
+      "0xe7eEe8a1c1690b0322d795B80A76ab2Cd1a0eAFd"
+    ],
+    "validator_votes_hash": [
+      "0xf543b976dfe3cf35573e27dd7527d677fef1f86d827c69afc97f45fa27c28c0b",
+      "0x4b3ffa375d8679586deaf5f67dc3aacb474c5cebb016f84440253b5744fcaae8",
+      "0xaa7d1f214f3b6d6558d6a5967dd0d8dc6cc457d05edd8e292778a8316f8a0454",
+      "0x76f52c4013505f159a985fd4e4cb9b1c515bc7db39f4cf58b63c2f665f71a9eb",
+      "0x39f7e8ce80333683939314d80f136cfecfb92de7f275d6f4604b5115f7bd00df"
+    ],
+    "validator_votes": [
+      5,
+      1,
+      1,
+      2,
+      1
+    ],
+    "validator_votes_name": [
+      "IDLE",
+      "AGREE",
+      "AGREE",
+      "DISAGREE",
+      "AGREE"
+    ]
+  },
+  "explorer": "https://explorer-studio.genlayer.com/tx/0x3446fedf3c4db60491e3451d5106a8370532d16cb5ada7d780476149cc572cea",
+  "executions": [
+    {
+      "mode": "leader",
+      "vote": null,
+      "execution_result": "SUCCESS",
+      "genvm_result": {
+        "stderr": "",
+        "stdout": "",
+        "raw_error": null,
+        "error_code": null,
+        "error_description": null
+      },
+      "nondet_disagree": null,
+      "contract_state_hash": "450bdfd6dbd3d292f25927f5e10dc609e57f4b490f2321f9af879ff3387292d9"
+    },
+    {
+      "mode": "validator",
+      "vote": "idle",
+      "execution_result": "ERROR",
+      "genvm_result": {
+        "stderr": "Validator execution cancelled after quorum",
+        "stdout": "",
+        "raw_error": {
+          "fatal": false,
+          "causes": [
+            "VALIDATOR_QUORUM_REACHED"
+          ]
+        },
+        "error_code": "CONSENSUS_VALIDATOR_QUORUM_REACHED"
+      },
+      "nondet_disagree": null,
+      "contract_state_hash": null
+    },
+    {
+      "mode": "validator",
+      "vote": "agree",
+      "execution_result": "SUCCESS",
+      "genvm_result": {
+        "stderr": "",
+        "stdout": "",
+        "raw_error": null,
+        "error_code": null,
+        "error_description": null
+      },
+      "nondet_disagree": null,
+      "contract_state_hash": "450bdfd6dbd3d292f25927f5e10dc609e57f4b490f2321f9af879ff3387292d9"
+    },
+    {
+      "mode": "validator",
+      "vote": "agree",
+      "execution_result": "SUCCESS",
+      "genvm_result": {
+        "stderr": "",
+        "stdout": "",
+        "raw_error": null,
+        "error_code": null,
+        "error_description": null
+      },
+      "nondet_disagree": null,
+      "contract_state_hash": "450bdfd6dbd3d292f25927f5e10dc609e57f4b490f2321f9af879ff3387292d9"
+    },
+    {
+      "mode": "validator",
+      "vote": "disagree",
+      "execution_result": "SUCCESS",
+      "genvm_result": {
+        "stderr": "",
+        "stdout": "",
+        "raw_error": null,
+        "error_code": null,
+        "error_description": null
+      },
+      "nondet_disagree": 0,
+      "contract_state_hash": "450bdfd6dbd3d292f25927f5e10dc609e57f4b490f2321f9af879ff3387292d9"
+    },
+    {
+      "mode": "validator",
+      "vote": "agree",
+      "execution_result": "SUCCESS",
+      "genvm_result": {
+        "stderr": "",
+        "stdout": "",
+        "raw_error": null,
+        "error_code": null,
+        "error_description": null
+      },
+      "nondet_disagree": null,
+      "contract_state_hash": "450bdfd6dbd3d292f25927f5e10dc609e57f4b490f2321f9af879ff3387292d9"
+    }
+  ],
+  "calldata": {
+    "args": [
+      "prerelease"
+    ],
+    "method": "review"
+  }
+}

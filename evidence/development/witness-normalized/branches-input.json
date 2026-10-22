@@ -1,0 +1,8 @@
+{
+  "contract": "0xbF3b79eB2550f6265CC979e46b1096557a3B337A",
+  "method": "register",
+  "args": [
+    "branches",
+    "{\"product\": \"AsterCache\", \"inventory\": [{\"id\": \"lower\", \"version\": \"2.4.0\", \"deployment\": \"Linux; optional shared-cache plugin enabled\"}, {\"id\": \"fixed\", \"version\": \"2.4.7\", \"deployment\": \"Linux; optional shared-cache plugin enabled\"}, {\"id\": \"branch3\", \"version\": \"3.0.2\", \"deployment\": \"Linux; optional shared-cache plugin enabled\"}, {\"id\": \"excluded\", \"version\": \"3.0.1\", \"deployment\": \"Windows; optional shared-cache plugin enabled\"}], \"source\": {\"url\": \"https://raw.githubusercontent.com/mrcactus66/version-applicability/ef200a688b5dc23380e80b9ccf415bbb4680551e/examples/branches.txt\", \"sha256\": \"690c17cab99d8530c106aa5e05b1785ce09b68e6c90e1af7147b4462f2c788ea\"}}"
+  ]
+}

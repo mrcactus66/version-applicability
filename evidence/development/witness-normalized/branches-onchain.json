@@ -1,0 +1,74 @@
+{
+  "case_id": "branches",
+  "evidence": {
+    "coverage": "EXACT",
+    "items": [
+      {
+        "id": "lower",
+        "quote": "Only Linux deployments with the optional shared-cache plugin enabled are in scope.\nLinux with that plugin disabled, and all Windows or macOS deployments, are excluded.\nThe installed version does not change those deployment prerequisites.",
+        "scope": "APPLIES"
+      },
+      {
+        "id": "fixed",
+        "quote": "Only Linux deployments with the optional shared-cache plugin enabled are in scope.\nLinux with that plugin disabled, and all Windows or macOS deployments, are excluded.\nThe installed version does not change those deployment prerequisites.",
+        "scope": "APPLIES"
+      },
+      {
+        "id": "branch3",
+        "quote": "Only Linux deployments with the optional shared-cache plugin enabled are in scope.\nLinux with that plugin disabled, and all Windows or macOS deployments, are excluded.\nThe installed version does not change those deployment prerequisites.",
+        "scope": "APPLIES"
+      },
+      {
+        "id": "excluded",
+        "quote": "Only Linux deployments with the optional shared-cache plugin enabled are in scope.\nLinux with that plugin disabled, and all Windows or macOS deployments, are excluded.\nThe installed version does not change those deployment prerequisites.",
+        "scope": "DOES_NOT_APPLY"
+      }
+    ],
+    "range_quote": "AsterCache is affected from 2.4.0 up to but not including 2.4.7, and from 3.0.0\nthrough 3.0.2 inclusive. These are the complete affected stable release ranges.",
+    "ranges": [
+      {
+        "lower": "2.4.0",
+        "lower_inclusive": true,
+        "upper": "2.4.7",
+        "upper_inclusive": false
+      },
+      {
+        "lower": "3.0.0",
+        "lower_inclusive": true,
+        "upper": "3.0.2",
+        "upper_inclusive": true
+      }
+    ]
+  },
+  "items": [
+    {
+      "id": "lower",
+      "matched_ranges": [
+        0
+      ],
+      "status": "AFFECTED",
+      "version": "2.4.0"
+    },
+    {
+      "id": "fixed",
+      "matched_ranges": [],
+      "status": "OUTSIDE_REPORTED_RANGE",
+      "version": "2.4.7"
+    },
+    {
+      "id": "branch3",
+      "matched_ranges": [
+        1
+      ],
+      "status": "AFFECTED",
+      "version": "3.0.2"
+    },
+    {
+      "id": "excluded",
+      "matched_ranges": [],
+      "status": "NOT_APPLICABLE",
+      "version": "3.0.1"
+    }
+  ],
+  "policy_sha256": "420be4f4179029b62f21fb00554fc4e8c2365156de4dfe8e00f15754258c710f"
+}

@@ -38,7 +38,7 @@ class StudioProvider(GenLayerProvider):
     def make_request(self, method, params):
         reads = {"eth_chainId", "eth_getTransactionCount", "eth_getBlockByNumber",
             "eth_estimateGas", "eth_getTransactionReceipt", "eth_getTransactionByHash",
-            "eth_call", "eth_getBalance", "gen_call"}
+            "eth_call", "eth_getBalance", "gen_call", "sim_getConsensusContract"}
         journal = None
         if method == "eth_sendRawTransaction":
             journal = {"evm_transaction_hash": Web3.to_hex(Web3.keccak(hexstr=params[0])),
@@ -66,6 +66,8 @@ client = GenLayerClient(studionet, account)
 client.provider = StudioProvider(studionet.rpc_urls["default"]["http"][0])
 client.w3.provider = client.provider
 client.initialize_consensus_smart_contract()
+if not getattr(client.chain, "__consensus_abi_fetched_from_rpc", False):
+    raise RuntimeError("Live consensus contract discovery failed; refusing the SDK's baked-in fallback")
 
 
 def save(name, value):
@@ -103,8 +105,9 @@ elif command in ("inspect", "wait"):
     public["explorer"] = "https://explorer-studio.genlayer.com/tx/" + tx
     consensus = raw.get("consensus_data") or {}
     public["executions"] = [execution(r) for r in (consensus.get("leader_receipt") or []) + (consensus.get("validators") or [])]
-    encoded = raw["data"]["calldata"]
-    public["calldata"] = encoded.get("readable") if isinstance(encoded, dict) else calldata.decode(base64.b64decode(encoded))
+    encoded = (raw.get("data") or {}).get("calldata")
+    if encoded is not None:
+        public["calldata"] = encoded.get("readable") if isinstance(encoded, dict) else calldata.decode(base64.b64decode(encoded))
     if raw["type"] == 1:
         public["deployed_source_sha256"] = hashlib.sha256(base64.b64decode(raw["data"]["contract_code"])).hexdigest()
         assert public["deployed_source_sha256"] == hashlib.sha256((ROOT / CONFIG["contract_file"]).read_bytes()).hexdigest()

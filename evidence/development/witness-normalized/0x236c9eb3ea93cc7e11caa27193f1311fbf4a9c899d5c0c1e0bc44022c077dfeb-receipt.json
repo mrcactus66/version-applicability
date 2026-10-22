@@ -1,0 +1,137 @@
+{
+  "hash": "0x236c9eb3ea93cc7e11caa27193f1311fbf4a9c899d5c0c1e0bc44022c077dfeb",
+  "from_address": "0xdc072EEB18F6ADff2d810f139Cd07929B7E1338F",
+  "to_address": "0xbF3b79eB2550f6265CC979e46b1096557a3B337A",
+  "value": 0,
+  "type": 2,
+  "status_name": "ACCEPTED",
+  "result_name": "MAJORITY_AGREE",
+  "leader_only": false,
+  "rotation_count": 0,
+  "num_of_rounds": "1",
+  "last_round": {
+    "round": "0",
+    "leader_index": "0",
+    "votes_committed": "5",
+    "votes_revealed": "5",
+    "appeal_bond": "0",
+    "rotations_left": "3",
+    "result": 6,
+    "round_validators": [
+      "0x7bf4Ea55363bbe73A4dd5b3900bf03c978A63b6e",
+      "0xf29b6947ed298d139FC2655DB15D868C9AbB3091",
+      "0x1242E9f5bf9b253327f130E8802b7b2F438A21Ef",
+      "0xad7d13f269CeAd4379E64a1A3a0803a827e70B43",
+      "0x5Bbbd7cdD63c0ba7f088038Cb049bDDAbE4F6fd1"
+    ],
+    "validator_votes_hash": [
+      "0xc209ec9c0439684868c7f26e14bdbd2042ff3ebb81406f8863c4173d9a63f656",
+      "0x1cf017475f8ecf5fc2c10559b581eb57f5dc8ed696151ada7a06cbd6f821fae4",
+      "0xf4e160722e48890af0d36ccd7c7cdc1d467bb1d029e76ce45fa521ab6b299b92",
+      "0x66042fdae9a5fefa48971f3c912c661a4cced7855dc20ae23bc84e57cd258e77",
+      "0x1a4bd0e5524698afcdd1979b6049291796e8d52206e764b36988d01ff7b5d63f"
+    ],
+    "validator_votes": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "validator_votes_name": [
+      "AGREE",
+      "AGREE",
+      "AGREE",
+      "AGREE",
+      "AGREE"
+    ]
+  },
+  "explorer": "https://explorer-studio.genlayer.com/tx/0x236c9eb3ea93cc7e11caa27193f1311fbf4a9c899d5c0c1e0bc44022c077dfeb",
+  "executions": [
+    {
+      "mode": "leader",
+      "vote": null,
+      "execution_result": "SUCCESS",
+      "genvm_result": {
+        "stderr": "",
+        "stdout": "",
+        "raw_error": null,
+        "error_code": null,
+        "error_description": null
+      },
+      "nondet_disagree": null,
+      "contract_state_hash": "39d4bbf596c0053ccdfac44843065bff67acb753fa667e84f0cffd15671e7b18"
+    },
+    {
+      "mode": "validator",
+      "vote": "agree",
+      "execution_result": "SUCCESS",
+      "genvm_result": {
+        "stderr": "",
+        "stdout": "",
+        "raw_error": null,
+        "error_code": null,
+        "error_description": null
+      },
+      "nondet_disagree": null,
+      "contract_state_hash": "39d4bbf596c0053ccdfac44843065bff67acb753fa667e84f0cffd15671e7b18"
+    },
+    {
+      "mode": "validator",
+      "vote": "agree",
+      "execution_result": "SUCCESS",
+      "genvm_result": {
+        "stderr": "",
+        "stdout": "",
+        "raw_error": null,
+        "error_code": null,
+        "error_description": null
+      },
+      "nondet_disagree": null,
+      "contract_state_hash": "39d4bbf596c0053ccdfac44843065bff67acb753fa667e84f0cffd15671e7b18"
+    },
+    {
+      "mode": "validator",
+      "vote": "agree",
+      "execution_result": "SUCCESS",
+      "genvm_result": {
+        "stderr": "",
+        "stdout": "",
+        "raw_error": null,
+        "error_code": null,
+        "error_description": null
+      },
+      "nondet_disagree": null,
+      "contract_state_hash": "39d4bbf596c0053ccdfac44843065bff67acb753fa667e84f0cffd15671e7b18"
+    },
+    {
+      "mode": "validator",
+      "vote": "agree",
+      "execution_result": "SUCCESS",
+      "genvm_result": {
+        "stderr": "",
+        "stdout": "",
+        "raw_error": null,
+        "error_code": null,
+        "error_description": null
+      },
+      "nondet_disagree": null,
+      "contract_state_hash": "39d4bbf596c0053ccdfac44843065bff67acb753fa667e84f0cffd15671e7b18"
+    },
+    {
+      "mode": "validator",
+      "vote": "agree",
+      "execution_result": "SUCCESS",
+      "genvm_result": {
+        "stderr": "",
+        "stdout": "",
+        "raw_error": null,
+        "error_code": null,
+        "error_description": null
+      },
+      "nondet_disagree": null,
+      "contract_state_hash": "39d4bbf596c0053ccdfac44843065bff67acb753fa667e84f0cffd15671e7b18"
+    }
+  ],
+  "calldata": "{\"args\":[\"prerelease\",\"{\\\"product\\\": \\\"AsterCache\\\", \\\"inventory\\\": [{\\\"id\\\": \\\"lower\\\", \\\"version\\\": \\\"2.4.0\\\", \\\"deployment\\\": \\\"Linux; optional shared-cache plugin enabled\\\"}, {\\\"id\\\": \\\"fixed\\\", \\\"version\\\": \\\"2.4.7\\\", \\\"deployment\\\": \\\"Linux; optional shared-cache plugin enabled\\\"}, {\\\"id\\\": \\\"branch3\\\", \\\"version\\\": \\\"3.0.2\\\", \\\"deployment\\\": \\\"Linux; optional shared-cache plugin enabled\\\"}, {\\\"id\\\": \\\"excluded\\\", \\\"version\\\": \\\"3.0.1\\\", \\\"deployment\\\": \\\"Windows; optional shared-cache plugin enabled\\\"}], \\\"source\\\": {\\\"url\\\": \\\"https://raw.githubusercontent.com/mrcactus66/version-applicability/ef200a688b5dc23380e80b9ccf415bbb4680551e/examples/prerelease.txt\\\", \\\"sha256\\\": \\\"584bf4b6b0f1e3b742de1a80800638b7609457df9e663f4aa17fea6bda7cc5ce\\\"}}\"],\"method\":\"register\"}"
+}

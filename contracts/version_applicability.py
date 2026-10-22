@@ -75,7 +75,8 @@ def check_result(policy: dict, body: str, result: typing.Any) -> None:
                 raise gl.vm.UserError("Bounds must be text")
             if interval[k]:
                 version(interval[k])
-                if not re.search(r"(?<![0-9A-Za-z.+-])" + re.escape(interval[k]) + r"(?![0-9A-Za-z.+-])", quote):
+                if not re.search(r"(?<![0-9A-Za-z_.+-])" + re.escape(interval[k])
+                        + r"(?![0-9A-Za-z_+-]|\.[0-9A-Za-z_])", quote):
                     raise gl.vm.UserError("Version boundary lacks an exact anchor")
             elif interval[k + "_inclusive"]:
                 raise gl.vm.UserError("Unbounded endpoints cannot be inclusive")
