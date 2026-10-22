@@ -1,0 +1,178 @@
+{
+  "repository": "mrcactus66/version-applicability",
+  "contract_file": "contracts/version_applicability.py",
+  "cases": {
+    "branches": {
+      "report": "examples/branches.txt",
+      "policy": {
+        "product": "AsterCache",
+        "inventory": [
+          {
+            "id": "lower",
+            "version": "2.4.0",
+            "deployment": "Linux; optional shared-cache plugin enabled"
+          },
+          {
+            "id": "fixed",
+            "version": "2.4.7",
+            "deployment": "Linux; optional shared-cache plugin enabled"
+          },
+          {
+            "id": "branch3",
+            "version": "3.0.2",
+            "deployment": "Linux; optional shared-cache plugin enabled"
+          },
+          {
+            "id": "excluded",
+            "version": "3.0.1",
+            "deployment": "Windows; optional shared-cache plugin enabled"
+          }
+        ]
+      },
+      "expected": {
+        "items": [
+          {
+            "id": "lower",
+            "version": "2.4.0",
+            "status": "AFFECTED",
+            "matched_ranges": [
+              0
+            ]
+          },
+          {
+            "id": "fixed",
+            "version": "2.4.7",
+            "status": "OUTSIDE_REPORTED_RANGE",
+            "matched_ranges": []
+          },
+          {
+            "id": "branch3",
+            "version": "3.0.2",
+            "status": "AFFECTED",
+            "matched_ranges": [
+              1
+            ]
+          },
+          {
+            "id": "excluded",
+            "version": "3.0.1",
+            "status": "NOT_APPLICABLE",
+            "matched_ranges": []
+          }
+        ]
+      }
+    },
+    "prerelease": {
+      "report": "examples/prerelease.txt",
+      "policy": {
+        "product": "AsterCache",
+        "inventory": [
+          {
+            "id": "lower",
+            "version": "2.4.0",
+            "deployment": "Linux; optional shared-cache plugin enabled"
+          },
+          {
+            "id": "fixed",
+            "version": "2.4.7",
+            "deployment": "Linux; optional shared-cache plugin enabled"
+          },
+          {
+            "id": "branch3",
+            "version": "3.0.2",
+            "deployment": "Linux; optional shared-cache plugin enabled"
+          },
+          {
+            "id": "excluded",
+            "version": "3.0.1",
+            "deployment": "Windows; optional shared-cache plugin enabled"
+          }
+        ]
+      },
+      "expected": {
+        "items": [
+          {
+            "id": "lower",
+            "version": "2.4.0",
+            "status": "INCOMPLETE",
+            "matched_ranges": []
+          },
+          {
+            "id": "fixed",
+            "version": "2.4.7",
+            "status": "INCOMPLETE",
+            "matched_ranges": []
+          },
+          {
+            "id": "branch3",
+            "version": "3.0.2",
+            "status": "INCOMPLETE",
+            "matched_ranges": []
+          },
+          {
+            "id": "excluded",
+            "version": "3.0.1",
+            "status": "NOT_APPLICABLE",
+            "matched_ranges": []
+          }
+        ]
+      }
+    },
+    "unclear": {
+      "report": "examples/unclear.txt",
+      "policy": {
+        "product": "AsterCache",
+        "inventory": [
+          {
+            "id": "lower",
+            "version": "2.4.0",
+            "deployment": "Linux; optional shared-cache plugin enabled"
+          },
+          {
+            "id": "fixed",
+            "version": "2.4.7",
+            "deployment": "Linux; optional shared-cache plugin enabled"
+          },
+          {
+            "id": "branch3",
+            "version": "3.0.2",
+            "deployment": "Linux; optional shared-cache plugin enabled"
+          },
+          {
+            "id": "excluded",
+            "version": "3.0.1",
+            "deployment": "Windows; optional shared-cache plugin enabled"
+          }
+        ]
+      },
+      "expected": {
+        "items": [
+          {
+            "id": "lower",
+            "version": "2.4.0",
+            "status": "INCOMPLETE",
+            "matched_ranges": []
+          },
+          {
+            "id": "fixed",
+            "version": "2.4.7",
+            "status": "INCOMPLETE",
+            "matched_ranges": []
+          },
+          {
+            "id": "branch3",
+            "version": "3.0.2",
+            "status": "INCOMPLETE",
+            "matched_ranges": []
+          },
+          {
+            "id": "excluded",
+            "version": "3.0.1",
+            "status": "INCOMPLETE",
+            "matched_ranges": []
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,4 @@
+Synthetic advisory for fictional AsterCache. This is not a real vulnerability.
+AsterCache versions from 4.0.0-rc.1 through 4.0.0-rc.4 are affected.
+Only Linux deployments with the optional shared-cache plugin enabled are in scope.
+Linux with that plugin disabled, and all Windows or macOS deployments, are excluded.

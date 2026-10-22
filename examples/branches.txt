@@ -1,0 +1,7 @@
+Synthetic advisory for the fictional AsterCache package. This is not a real vulnerability.
+
+AsterCache is affected from 2.4.0 up to but not including 2.4.7, and from 3.0.0
+through 3.0.2 inclusive. These are the complete affected stable release ranges.
+Only Linux deployments with the optional shared-cache plugin enabled are in scope.
+Linux with that plugin disabled, and all Windows or macOS deployments, are excluded.
+The installed version does not change those deployment prerequisites.

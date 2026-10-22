@@ -1,0 +1,5 @@
+Synthetic advisory for fictional AsterCache. This is not a real vulnerability.
+AsterCache is affected from 2.4.0 up to but not including 2.4.7. This is the
+complete affected stable release range.
+The issue affects some optional plugin configurations. The advisory does not
+identify the plugin or the operating systems that are affected.
