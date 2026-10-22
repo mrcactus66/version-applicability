@@ -1,0 +1,8 @@
+{
+  "contract": "0xc2b22892335f90D79E7BdF34C8623931d83B4547",
+  "method": "register",
+  "args": [
+    "unclear",
+    "{\"product\": \"AsterCache\", \"inventory\": [{\"id\": \"lower\", \"version\": \"2.4.0\", \"deployment\": \"Linux; optional shared-cache plugin enabled\"}, {\"id\": \"fixed\", \"version\": \"2.4.7\", \"deployment\": \"Linux; optional shared-cache plugin enabled\"}, {\"id\": \"branch3\", \"version\": \"3.0.2\", \"deployment\": \"Linux; optional shared-cache plugin enabled\"}, {\"id\": \"excluded\", \"version\": \"3.0.1\", \"deployment\": \"Windows; optional shared-cache plugin enabled\"}], \"source\": {\"url\": \"https://raw.githubusercontent.com/mrcactus66/version-applicability/125a421946ac52415682b068c712cf963631d36f/examples/unclear.txt\", \"sha256\": \"9ccaaf92cdff7f8061e756d9e350ed8ed593dc2ccb3557329c855acdfb80bc89\"}}"
+  ]
+}

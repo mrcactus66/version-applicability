@@ -1,0 +1,141 @@
+{
+  "hash": "0xfa6cd4ae5cb5c960e104d19a74a792866819d8fca3e593797ebc9d497a995278",
+  "from_address": "0xdc072EEB18F6ADff2d810f139Cd07929B7E1338F",
+  "to_address": "0xc2b22892335f90D79E7BdF34C8623931d83B4547",
+  "value": 0,
+  "type": 2,
+  "status_name": "ACCEPTED",
+  "result_name": "MAJORITY_AGREE",
+  "leader_only": false,
+  "rotation_count": 0,
+  "num_of_rounds": "1",
+  "last_round": {
+    "round": "0",
+    "leader_index": "0",
+    "votes_committed": "5",
+    "votes_revealed": "5",
+    "appeal_bond": "0",
+    "rotations_left": "3",
+    "result": 6,
+    "round_validators": [
+      "0x892C437da9b9CA0b6017B6f046F58E3526B46ec6",
+      "0x2FcBC452425f2F1e102c5c04b4331fcB46ee1c00",
+      "0x17ac0CaefB18205c737e64ee582c9245A28ca1f9",
+      "0xad7d13f269CeAd4379E64a1A3a0803a827e70B43",
+      "0x1dEcE6A694520b1d3a2e24b9f28500858C756BDb"
+    ],
+    "validator_votes_hash": [
+      "0x22297f258d73d47f57536cd2d1a59ce27dca3261fbaf039f4c6619f9731c7e47",
+      "0xc605cd7df7eb2dbbd73aeeefb45a64e8aaf006a145768c50fa1d7278e7eff0a4",
+      "0xd03993caf9b69212ae6fc077631ac35f1d3a4e3fac34cc059b33486f02c60673",
+      "0x053a89e367f1c795e3f016ddb53e3fe7eabb4b470bc9794ce65d63017fb57e81",
+      "0xf9569405e2e946dc6163975e558df57b087e81102403fd645c4b1f0a7334df12"
+    ],
+    "validator_votes": [
+      1,
+      2,
+      1,
+      1,
+      5
+    ],
+    "validator_votes_name": [
+      "AGREE",
+      "DISAGREE",
+      "AGREE",
+      "AGREE",
+      "IDLE"
+    ]
+  },
+  "explorer": "https://explorer-studio.genlayer.com/tx/0xfa6cd4ae5cb5c960e104d19a74a792866819d8fca3e593797ebc9d497a995278",
+  "executions": [
+    {
+      "mode": "leader",
+      "vote": null,
+      "execution_result": "SUCCESS",
+      "genvm_result": {
+        "stderr": "",
+        "stdout": "",
+        "raw_error": null,
+        "error_code": null,
+        "error_description": null
+      },
+      "nondet_disagree": null,
+      "contract_state_hash": "bf8e59c2bb535def7e76da105c9f258ed17ef65b3366572ff14e3507a857afd4"
+    },
+    {
+      "mode": "validator",
+      "vote": "agree",
+      "execution_result": "SUCCESS",
+      "genvm_result": {
+        "stderr": "",
+        "stdout": "",
+        "raw_error": null,
+        "error_code": null,
+        "error_description": null
+      },
+      "nondet_disagree": null,
+      "contract_state_hash": "bf8e59c2bb535def7e76da105c9f258ed17ef65b3366572ff14e3507a857afd4"
+    },
+    {
+      "mode": "validator",
+      "vote": "disagree",
+      "execution_result": "SUCCESS",
+      "genvm_result": {
+        "stderr": "",
+        "stdout": "",
+        "raw_error": null,
+        "error_code": null,
+        "error_description": null
+      },
+      "nondet_disagree": 0,
+      "contract_state_hash": "bf8e59c2bb535def7e76da105c9f258ed17ef65b3366572ff14e3507a857afd4"
+    },
+    {
+      "mode": "validator",
+      "vote": "agree",
+      "execution_result": "SUCCESS",
+      "genvm_result": {
+        "stderr": "",
+        "stdout": "",
+        "raw_error": null,
+        "error_code": null,
+        "error_description": null
+      },
+      "nondet_disagree": null,
+      "contract_state_hash": "bf8e59c2bb535def7e76da105c9f258ed17ef65b3366572ff14e3507a857afd4"
+    },
+    {
+      "mode": "validator",
+      "vote": "agree",
+      "execution_result": "SUCCESS",
+      "genvm_result": {
+        "stderr": "",
+        "stdout": "",
+        "raw_error": null,
+        "error_code": null,
+        "error_description": null
+      },
+      "nondet_disagree": null,
+      "contract_state_hash": "bf8e59c2bb535def7e76da105c9f258ed17ef65b3366572ff14e3507a857afd4"
+    },
+    {
+      "mode": "validator",
+      "vote": "idle",
+      "execution_result": "ERROR",
+      "genvm_result": {
+        "stderr": "Validator execution cancelled after quorum",
+        "stdout": "",
+        "raw_error": {
+          "fatal": false,
+          "causes": [
+            "VALIDATOR_QUORUM_REACHED"
+          ]
+        },
+        "error_code": "CONSENSUS_VALIDATOR_QUORUM_REACHED"
+      },
+      "nondet_disagree": null,
+      "contract_state_hash": null
+    }
+  ],
+  "calldata": "{\"args\":[\"branches\"],\"method\":\"review\"}"
+}

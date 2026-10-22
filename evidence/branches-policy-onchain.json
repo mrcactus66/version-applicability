@@ -1,0 +1,29 @@
+{
+  "inventory": [
+    {
+      "deployment": "Linux; optional shared-cache plugin enabled",
+      "id": "lower",
+      "version": "2.4.0"
+    },
+    {
+      "deployment": "Linux; optional shared-cache plugin enabled",
+      "id": "fixed",
+      "version": "2.4.7"
+    },
+    {
+      "deployment": "Linux; optional shared-cache plugin enabled",
+      "id": "branch3",
+      "version": "3.0.2"
+    },
+    {
+      "deployment": "Windows; optional shared-cache plugin enabled",
+      "id": "excluded",
+      "version": "3.0.1"
+    }
+  ],
+  "product": "AsterCache",
+  "source": {
+    "sha256": "690c17cab99d8530c106aa5e05b1785ce09b68e6c90e1af7147b4462f2c788ea",
+    "url": "https://raw.githubusercontent.com/mrcactus66/version-applicability/125a421946ac52415682b068c712cf963631d36f/examples/branches.txt"
+  }
+}

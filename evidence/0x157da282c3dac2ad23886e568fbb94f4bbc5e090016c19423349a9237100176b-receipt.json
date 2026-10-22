@@ -1,0 +1,150 @@
+{
+  "hash": "0x157da282c3dac2ad23886e568fbb94f4bbc5e090016c19423349a9237100176b",
+  "from_address": "0xdc072EEB18F6ADff2d810f139Cd07929B7E1338F",
+  "to_address": "0xc2b22892335f90D79E7BdF34C8623931d83B4547",
+  "value": 0,
+  "type": 1,
+  "status_name": "FINALIZED",
+  "result_name": "MAJORITY_AGREE",
+  "leader_only": false,
+  "rotation_count": 0,
+  "num_of_rounds": "1",
+  "last_round": {
+    "round": "0",
+    "leader_index": "0",
+    "votes_committed": "5",
+    "votes_revealed": "5",
+    "appeal_bond": "0",
+    "rotations_left": "3",
+    "result": 6,
+    "round_validators": [
+      "0xf29b6947ed298d139FC2655DB15D868C9AbB3091",
+      "0x892C437da9b9CA0b6017B6f046F58E3526B46ec6",
+      "0x6a4179A851B3747A458baD2f089AB2EeFE0eBbAb",
+      "0x5Bbbd7cdD63c0ba7f088038Cb049bDDAbE4F6fd1",
+      "0xb0925568bFbCF00aADBcA053E6D0E1628ff3d530"
+    ],
+    "validator_votes_hash": [
+      "0x02db3555bd4cba6273cf5a910a69f340303ff2afec7c227e96f2124788018e74",
+      "0x3de278dc4286c0768355b24f717db350067f3412b49e846cfe215d5101b52fb8",
+      "0x785991e50e55cb4f4355a76f60c1873d66cbdd8f337db8593f7c4761e1f26e05",
+      "0xd9ee10ec5e145604318974849d6e6f4e6a9e556ca51496902af7c9dca2ccb77f",
+      "0xf4e07d5f786661cb844d084981e9aed5f0304e61927cd9c22ceded99acb2e0d6"
+    ],
+    "validator_votes": [
+      5,
+      1,
+      5,
+      1,
+      1
+    ],
+    "validator_votes_name": [
+      "IDLE",
+      "AGREE",
+      "IDLE",
+      "AGREE",
+      "AGREE"
+    ]
+  },
+  "explorer": "https://explorer-studio.genlayer.com/tx/0x157da282c3dac2ad23886e568fbb94f4bbc5e090016c19423349a9237100176b",
+  "executions": [
+    {
+      "mode": "leader",
+      "vote": null,
+      "execution_result": "SUCCESS",
+      "genvm_result": {
+        "stderr": "",
+        "stdout": "",
+        "raw_error": null,
+        "error_code": null,
+        "error_description": null
+      },
+      "nondet_disagree": null,
+      "contract_state_hash": "c9aa53990b70cc63942916e6d2fdecb68576ebcec65269d4e2f6b2975f3f1259"
+    },
+    {
+      "mode": "validator",
+      "vote": "idle",
+      "execution_result": "ERROR",
+      "genvm_result": {
+        "stderr": "Validator execution cancelled after quorum",
+        "stdout": "",
+        "raw_error": {
+          "fatal": false,
+          "causes": [
+            "VALIDATOR_QUORUM_REACHED"
+          ]
+        },
+        "error_code": "CONSENSUS_VALIDATOR_QUORUM_REACHED"
+      },
+      "nondet_disagree": null,
+      "contract_state_hash": null
+    },
+    {
+      "mode": "validator",
+      "vote": "agree",
+      "execution_result": "SUCCESS",
+      "genvm_result": {
+        "stderr": "",
+        "stdout": "",
+        "raw_error": null,
+        "error_code": null,
+        "error_description": null
+      },
+      "nondet_disagree": null,
+      "contract_state_hash": "c9aa53990b70cc63942916e6d2fdecb68576ebcec65269d4e2f6b2975f3f1259"
+    },
+    {
+      "mode": "validator",
+      "vote": "idle",
+      "execution_result": "ERROR",
+      "genvm_result": {
+        "stderr": "Validator execution cancelled after quorum",
+        "stdout": "",
+        "raw_error": {
+          "fatal": false,
+          "causes": [
+            "VALIDATOR_QUORUM_REACHED"
+          ]
+        },
+        "error_code": "CONSENSUS_VALIDATOR_QUORUM_REACHED"
+      },
+      "nondet_disagree": null,
+      "contract_state_hash": null
+    },
+    {
+      "mode": "validator",
+      "vote": "agree",
+      "execution_result": "SUCCESS",
+      "genvm_result": {
+        "stderr": "",
+        "stdout": "",
+        "raw_error": null,
+        "error_code": null,
+        "error_description": null
+      },
+      "nondet_disagree": null,
+      "contract_state_hash": "c9aa53990b70cc63942916e6d2fdecb68576ebcec65269d4e2f6b2975f3f1259"
+    },
+    {
+      "mode": "validator",
+      "vote": "agree",
+      "execution_result": "SUCCESS",
+      "genvm_result": {
+        "stderr": "",
+        "stdout": "",
+        "raw_error": null,
+        "error_code": null,
+        "error_description": null
+      },
+      "nondet_disagree": null,
+      "contract_state_hash": "c9aa53990b70cc63942916e6d2fdecb68576ebcec65269d4e2f6b2975f3f1259"
+    }
+  ],
+  "calldata": {
+    "args": [
+      "mrcactus66/version-applicability"
+    ]
+  },
+  "deployed_source_sha256": "fd9af651186277e1feaef51eb4ee0492d01878774d7ff3bbe676880edc8049ab"
+}

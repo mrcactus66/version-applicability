@@ -1,0 +1,151 @@
+{
+  "hash": "0x6cde65de969d09faf915187cefe227a26bad812b12671de9bc13458c58b207bb",
+  "from_address": "0xdc072EEB18F6ADff2d810f139Cd07929B7E1338F",
+  "to_address": "0xc2b22892335f90D79E7BdF34C8623931d83B4547",
+  "value": 0,
+  "type": 2,
+  "status_name": "ACCEPTED",
+  "result_name": "MAJORITY_AGREE",
+  "leader_only": false,
+  "rotation_count": 0,
+  "num_of_rounds": "1",
+  "last_round": {
+    "round": "0",
+    "leader_index": "0",
+    "votes_committed": "5",
+    "votes_revealed": "5",
+    "appeal_bond": "0",
+    "rotations_left": "3",
+    "result": 6,
+    "round_validators": [
+      "0x8a876C3F3a4783Bd123982bcBF3c672dc0239004",
+      "0x1dEcE6A694520b1d3a2e24b9f28500858C756BDb",
+      "0xf29b6947ed298d139FC2655DB15D868C9AbB3091",
+      "0xA712cB25a4002666FA9D09477251f238dD9e06b3",
+      "0x6a4179A851B3747A458baD2f089AB2EeFE0eBbAb"
+    ],
+    "validator_votes_hash": [
+      "0xe03df880c18ba9387f0f235bc4a060c495d2a0b4a237abe6bea0092ce887d104",
+      "0x93fd774b39663c260dcb00823125518343e3bd3dc51c5cf3788353ee5b7037b4",
+      "0xe01d3db0b5b9225846cb4ef2f51ebc6a06fe0951f4d4423bb470e116d7f80387",
+      "0x440ae7cb1018604060a6abae9e0dc803330daf69f8b11e8cf54201aba661529f",
+      "0x4867210119ee9fb443853102cc5501935a0cf19c4db234aaf8aa421afc137aae"
+    ],
+    "validator_votes": [
+      5,
+      1,
+      5,
+      1,
+      1
+    ],
+    "validator_votes_name": [
+      "IDLE",
+      "AGREE",
+      "IDLE",
+      "AGREE",
+      "AGREE"
+    ]
+  },
+  "explorer": "https://explorer-studio.genlayer.com/tx/0x6cde65de969d09faf915187cefe227a26bad812b12671de9bc13458c58b207bb",
+  "executions": [
+    {
+      "mode": "leader",
+      "vote": null,
+      "execution_result": "SUCCESS",
+      "genvm_result": {
+        "stderr": "",
+        "stdout": "",
+        "raw_error": null,
+        "error_code": null,
+        "error_description": null
+      },
+      "nondet_disagree": null,
+      "contract_state_hash": "2300ac9fcb9866db4acd350d935039ba567d3c31a04a5ac0a7c97896d2147548"
+    },
+    {
+      "mode": "validator",
+      "vote": "idle",
+      "execution_result": "ERROR",
+      "genvm_result": {
+        "stderr": "Validator execution cancelled after quorum",
+        "stdout": "",
+        "raw_error": {
+          "fatal": false,
+          "causes": [
+            "VALIDATOR_QUORUM_REACHED"
+          ]
+        },
+        "error_code": "CONSENSUS_VALIDATOR_QUORUM_REACHED"
+      },
+      "nondet_disagree": null,
+      "contract_state_hash": null
+    },
+    {
+      "mode": "validator",
+      "vote": "agree",
+      "execution_result": "SUCCESS",
+      "genvm_result": {
+        "stderr": "",
+        "stdout": "",
+        "raw_error": null,
+        "error_code": null,
+        "error_description": null
+      },
+      "nondet_disagree": null,
+      "contract_state_hash": "2300ac9fcb9866db4acd350d935039ba567d3c31a04a5ac0a7c97896d2147548"
+    },
+    {
+      "mode": "validator",
+      "vote": "idle",
+      "execution_result": "ERROR",
+      "genvm_result": {
+        "stderr": "Validator execution cancelled after quorum",
+        "stdout": "",
+        "raw_error": {
+          "fatal": false,
+          "causes": [
+            "VALIDATOR_QUORUM_REACHED"
+          ]
+        },
+        "error_code": "CONSENSUS_VALIDATOR_QUORUM_REACHED"
+      },
+      "nondet_disagree": null,
+      "contract_state_hash": null
+    },
+    {
+      "mode": "validator",
+      "vote": "agree",
+      "execution_result": "SUCCESS",
+      "genvm_result": {
+        "stderr": "",
+        "stdout": "",
+        "raw_error": null,
+        "error_code": null,
+        "error_description": null
+      },
+      "nondet_disagree": null,
+      "contract_state_hash": "2300ac9fcb9866db4acd350d935039ba567d3c31a04a5ac0a7c97896d2147548"
+    },
+    {
+      "mode": "validator",
+      "vote": "agree",
+      "execution_result": "SUCCESS",
+      "genvm_result": {
+        "stderr": "",
+        "stdout": "",
+        "raw_error": null,
+        "error_code": null,
+        "error_description": null
+      },
+      "nondet_disagree": null,
+      "contract_state_hash": "2300ac9fcb9866db4acd350d935039ba567d3c31a04a5ac0a7c97896d2147548"
+    }
+  ],
+  "calldata": {
+    "args": [
+      "prerelease",
+      "{\"product\": \"AsterCache\", \"inventory\": [{\"id\": \"lower\", \"version\": \"2.4.0\", \"deployment\": \"Linux; optional shared-cache plugin enabled\"}, {\"id\": \"fixed\", \"version\": \"2.4.7\", \"deployment\": \"Linux; optional shared-cache plugin enabled\"}, {\"id\": \"branch3\", \"version\": \"3.0.2\", \"deployment\": \"Linux; optional shared-cache plugin enabled\"}, {\"id\": \"excluded\", \"version\": \"3.0.1\", \"deployment\": \"Windows; optional shared-cache plugin enabled\"}], \"source\": {\"url\": \"https://raw.githubusercontent.com/mrcactus66/version-applicability/125a421946ac52415682b068c712cf963631d36f/examples/prerelease.txt\", \"sha256\": \"584bf4b6b0f1e3b742de1a80800638b7609457df9e663f4aa17fea6bda7cc5ce\"}}"
+    ],
+    "method": "register"
+  }
+}

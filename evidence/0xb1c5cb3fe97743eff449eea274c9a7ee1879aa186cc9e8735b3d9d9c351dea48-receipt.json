@@ -1,0 +1,137 @@
+{
+  "hash": "0xb1c5cb3fe97743eff449eea274c9a7ee1879aa186cc9e8735b3d9d9c351dea48",
+  "from_address": "0xdc072EEB18F6ADff2d810f139Cd07929B7E1338F",
+  "to_address": "0xc2b22892335f90D79E7BdF34C8623931d83B4547",
+  "value": 0,
+  "type": 2,
+  "status_name": "ACCEPTED",
+  "result_name": "MAJORITY_AGREE",
+  "leader_only": false,
+  "rotation_count": 0,
+  "num_of_rounds": "1",
+  "last_round": {
+    "round": "0",
+    "leader_index": "0",
+    "votes_committed": "5",
+    "votes_revealed": "5",
+    "appeal_bond": "0",
+    "rotations_left": "3",
+    "result": 6,
+    "round_validators": [
+      "0x6a4179A851B3747A458baD2f089AB2EeFE0eBbAb",
+      "0x8a876C3F3a4783Bd123982bcBF3c672dc0239004",
+      "0x7bf4Ea55363bbe73A4dd5b3900bf03c978A63b6e",
+      "0x1242E9f5bf9b253327f130E8802b7b2F438A21Ef",
+      "0xf1C7551292319EE334e2D8A24eAC108Bd4C63b21"
+    ],
+    "validator_votes_hash": [
+      "0x3078b75b61691b53cadb7784a9a9941a001459fee6b89725eeaf0c4ae3504b44",
+      "0xaa2a062944795409abec251f2a6ef4eb48115f47aa389989cc36cb37f1fb0d3b",
+      "0x0123010573f1e02f105eea8af01a0e14cb7c142dd71f1e064f2fbbaa3c1549e9",
+      "0xd1318eac5e2b11e722397598dc77a2dac7dd5a1d6cd60ca978bdd3eb912d8889",
+      "0xd877a4840c8ef5774ac9783e9ba88dc743be170a05ee698afb0ebf5ecca75abd"
+    ],
+    "validator_votes": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "validator_votes_name": [
+      "AGREE",
+      "AGREE",
+      "AGREE",
+      "AGREE",
+      "AGREE"
+    ]
+  },
+  "explorer": "https://explorer-studio.genlayer.com/tx/0xb1c5cb3fe97743eff449eea274c9a7ee1879aa186cc9e8735b3d9d9c351dea48",
+  "executions": [
+    {
+      "mode": "leader",
+      "vote": null,
+      "execution_result": "SUCCESS",
+      "genvm_result": {
+        "stderr": "",
+        "stdout": "",
+        "raw_error": null,
+        "error_code": null,
+        "error_description": null
+      },
+      "nondet_disagree": null,
+      "contract_state_hash": "b06b75a08bc0e0ea66fa0b8f5f7790a29bb144617e0efb1fb9c07ce81e24eeeb"
+    },
+    {
+      "mode": "validator",
+      "vote": "agree",
+      "execution_result": "SUCCESS",
+      "genvm_result": {
+        "stderr": "",
+        "stdout": "",
+        "raw_error": null,
+        "error_code": null,
+        "error_description": null
+      },
+      "nondet_disagree": null,
+      "contract_state_hash": "b06b75a08bc0e0ea66fa0b8f5f7790a29bb144617e0efb1fb9c07ce81e24eeeb"
+    },
+    {
+      "mode": "validator",
+      "vote": "agree",
+      "execution_result": "SUCCESS",
+      "genvm_result": {
+        "stderr": "",
+        "stdout": "",
+        "raw_error": null,
+        "error_code": null,
+        "error_description": null
+      },
+      "nondet_disagree": null,
+      "contract_state_hash": "b06b75a08bc0e0ea66fa0b8f5f7790a29bb144617e0efb1fb9c07ce81e24eeeb"
+    },
+    {
+      "mode": "validator",
+      "vote": "agree",
+      "execution_result": "SUCCESS",
+      "genvm_result": {
+        "stderr": "",
+        "stdout": "",
+        "raw_error": null,
+        "error_code": null,
+        "error_description": null
+      },
+      "nondet_disagree": null,
+      "contract_state_hash": "b06b75a08bc0e0ea66fa0b8f5f7790a29bb144617e0efb1fb9c07ce81e24eeeb"
+    },
+    {
+      "mode": "validator",
+      "vote": "agree",
+      "execution_result": "SUCCESS",
+      "genvm_result": {
+        "stderr": "",
+        "stdout": "",
+        "raw_error": null,
+        "error_code": null,
+        "error_description": null
+      },
+      "nondet_disagree": null,
+      "contract_state_hash": "b06b75a08bc0e0ea66fa0b8f5f7790a29bb144617e0efb1fb9c07ce81e24eeeb"
+    },
+    {
+      "mode": "validator",
+      "vote": "agree",
+      "execution_result": "SUCCESS",
+      "genvm_result": {
+        "stderr": "",
+        "stdout": "",
+        "raw_error": null,
+        "error_code": null,
+        "error_description": null
+      },
+      "nondet_disagree": null,
+      "contract_state_hash": "b06b75a08bc0e0ea66fa0b8f5f7790a29bb144617e0efb1fb9c07ce81e24eeeb"
+    }
+  ],
+  "calldata": "{\"args\":[\"unclear\",\"{\\\"product\\\": \\\"AsterCache\\\", \\\"inventory\\\": [{\\\"id\\\": \\\"lower\\\", \\\"version\\\": \\\"2.4.0\\\", \\\"deployment\\\": \\\"Linux; optional shared-cache plugin enabled\\\"}, {\\\"id\\\": \\\"fixed\\\", \\\"version\\\": \\\"2.4.7\\\", \\\"deployment\\\": \\\"Linux; optional shared-cache plugin enabled\\\"}, {\\\"id\\\": \\\"branch3\\\", \\\"version\\\": \\\"3.0.2\\\", \\\"deployment\\\": \\\"Linux; optional shared-cache plugin enabled\\\"}, {\\\"id\\\": \\\"excluded\\\", \\\"version\\\": \\\"3.0.1\\\", \\\"deployment\\\": \\\"Windows; optional shared-cache plugin enabled\\\"}], \\\"source\\\": {\\\"url\\\": \\\"https://raw.githubusercontent.com/mrcactus66/version-applicability/125a421946ac52415682b068c712cf963631d36f/examples/unclear.txt\\\", \\\"sha256\\\": \\\"9ccaaf92cdff7f8061e756d9e350ed8ed593dc2ccb3557329c855acdfb80bc89\\\"}}\"],\"method\":\"register\"}"
+}

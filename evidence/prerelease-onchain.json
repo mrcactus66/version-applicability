@@ -1,0 +1,57 @@
+{
+  "case_id": "prerelease",
+  "evidence": {
+    "coverage": "UNSUPPORTED",
+    "items": [
+      {
+        "id": "lower",
+        "quote": "Only Linux deployments with the optional shared-cache plugin enabled are in scope.",
+        "scope": "APPLIES"
+      },
+      {
+        "id": "fixed",
+        "quote": "Only Linux deployments with the optional shared-cache plugin enabled are in scope.",
+        "scope": "APPLIES"
+      },
+      {
+        "id": "branch3",
+        "quote": "Only Linux deployments with the optional shared-cache plugin enabled are in scope.",
+        "scope": "APPLIES"
+      },
+      {
+        "id": "excluded",
+        "quote": "Linux with that plugin disabled, and all Windows or macOS deployments, are excluded.",
+        "scope": "DOES_NOT_APPLY"
+      }
+    ],
+    "range_quote": "AsterCache versions from 4.0.0-rc.1 through 4.0.0-rc.4 are affected.",
+    "ranges": []
+  },
+  "items": [
+    {
+      "id": "lower",
+      "matched_ranges": [],
+      "status": "INCOMPLETE",
+      "version": "2.4.0"
+    },
+    {
+      "id": "fixed",
+      "matched_ranges": [],
+      "status": "INCOMPLETE",
+      "version": "2.4.7"
+    },
+    {
+      "id": "branch3",
+      "matched_ranges": [],
+      "status": "INCOMPLETE",
+      "version": "3.0.2"
+    },
+    {
+      "id": "excluded",
+      "matched_ranges": [],
+      "status": "NOT_APPLICABLE",
+      "version": "3.0.1"
+    }
+  ],
+  "policy_sha256": "fdbaeb677c75be93c202d25b8636501f42fbae595961a0ff8cceaee33821e510"
+}

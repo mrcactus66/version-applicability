@@ -49,6 +49,23 @@ HTTP, size, UTF-8, digest or malformed-response failures revert, preserving a
 retry. A completed `INCOMPLETE` observation needs a fresh ID and evidence for a
 new review. Reports are capped at 16 KB, ranges at four, inventory at eight.
 
+## StudioNet evidence
+
+Final deployment: [0xc2b22892335f90D79E7BdF34C8623931d83B4547](https://explorer-studio.genlayer.com/address/0xc2b22892335f90D79E7BdF34C8623931d83B4547).
+The deployed source matches commit `125a421`. Seven zero-value transactions and
+three onchain reads are indexed in [evidence/index.json](evidence/index.json).
+
+| Case | Observed result |
+| --- | --- |
+| `branches` | Inclusive lower bound and second branch AFFECTED; excluded upper bound OUTSIDE_REPORTED_RANGE; Windows NOT_APPLICABLE |
+| `prerelease` | Unsupported version coverage INCOMPLETE; explicitly excluded Windows deployment NOT_APPLICABLE |
+| `unclear` | All four deployments INCOMPLETE because prerequisites are unspecified |
+
+All three final reviews reached MAJORITY_AGREE with successful leader execution
+and no leader rotations. Majority agreement is not unanimity. Earlier failures,
+their receipts and the fixes are documented under
+[evidence/development](evidence/development/README.md).
+
 ## Run locally
 
 Python 3.13 was used for 60 direct-mode tests and the GenVM linter/SDK validation.
@@ -73,6 +90,8 @@ one write per invocation and does not retry uncertain writes. Inspect an existin
 transaction when its outcome is unknown. Reads and compact receipts are public
 under `evidence/`; full RPC receipts stay local. `verify_evidence.py` checks saved
 evidence offline and does not query the network.
+The script retries reads with a bound and refuses the SDK's static consensus
+address when live address discovery fails. Signed writes are never retried.
 
 ## Limits and provenance
 

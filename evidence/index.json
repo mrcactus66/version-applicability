@@ -1,0 +1,66 @@
+{
+  "network": "StudioNet",
+  "chain_id": 61999,
+  "fixtures": "synthetic",
+  "source_sha256_verified": true,
+  "results_verified": true,
+  "contract": "0xc2b22892335f90D79E7BdF34C8623931d83B4547",
+  "transactions": [
+    {
+      "operation": "branches-register",
+      "transaction_id": "0x54ae7ddaaed626d507753dc795a655f9a1e939a21db3454214f27db6e0e81d94",
+      "status": "ACCEPTED",
+      "consensus": "MAJORITY_AGREE",
+      "rotations": 0,
+      "receipt": "0x54ae7ddaaed626d507753dc795a655f9a1e939a21db3454214f27db6e0e81d94-receipt.json"
+    },
+    {
+      "operation": "branches-review",
+      "transaction_id": "0xfa6cd4ae5cb5c960e104d19a74a792866819d8fca3e593797ebc9d497a995278",
+      "status": "ACCEPTED",
+      "consensus": "MAJORITY_AGREE",
+      "rotations": 0,
+      "receipt": "0xfa6cd4ae5cb5c960e104d19a74a792866819d8fca3e593797ebc9d497a995278-receipt.json"
+    },
+    {
+      "operation": "deploy",
+      "transaction_id": "0x157da282c3dac2ad23886e568fbb94f4bbc5e090016c19423349a9237100176b",
+      "status": "FINALIZED",
+      "consensus": "MAJORITY_AGREE",
+      "rotations": 0,
+      "receipt": "0x157da282c3dac2ad23886e568fbb94f4bbc5e090016c19423349a9237100176b-receipt.json"
+    },
+    {
+      "operation": "prerelease-register",
+      "transaction_id": "0x6cde65de969d09faf915187cefe227a26bad812b12671de9bc13458c58b207bb",
+      "status": "ACCEPTED",
+      "consensus": "MAJORITY_AGREE",
+      "rotations": 0,
+      "receipt": "0x6cde65de969d09faf915187cefe227a26bad812b12671de9bc13458c58b207bb-receipt.json"
+    },
+    {
+      "operation": "prerelease-review",
+      "transaction_id": "0x7a1da02d57684cf105357bde8d76598f0e36f81ed32b3760ca351f7e02e4d8f8",
+      "status": "ACCEPTED",
+      "consensus": "MAJORITY_AGREE",
+      "rotations": 0,
+      "receipt": "0x7a1da02d57684cf105357bde8d76598f0e36f81ed32b3760ca351f7e02e4d8f8-receipt.json"
+    },
+    {
+      "operation": "unclear-register",
+      "transaction_id": "0xb1c5cb3fe97743eff449eea274c9a7ee1879aa186cc9e8735b3d9d9c351dea48",
+      "status": "ACCEPTED",
+      "consensus": "MAJORITY_AGREE",
+      "rotations": 0,
+      "receipt": "0xb1c5cb3fe97743eff449eea274c9a7ee1879aa186cc9e8735b3d9d9c351dea48-receipt.json"
+    },
+    {
+      "operation": "unclear-review",
+      "transaction_id": "0x578b227a59c9888c78ab7f99a8738b0197ea4a15dc72c41711539768ceee31cd",
+      "status": "ACCEPTED",
+      "consensus": "MAJORITY_AGREE",
+      "rotations": 0,
+      "receipt": "0x578b227a59c9888c78ab7f99a8738b0197ea4a15dc72c41711539768ceee31cd-receipt.json"
+    }
+  ]
+}

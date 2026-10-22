@@ -1,0 +1,64 @@
+{
+  "case_id": "unclear",
+  "evidence": {
+    "coverage": "EXACT",
+    "items": [
+      {
+        "id": "lower",
+        "quote": "The issue affects some optional plugin configurations. The advisory does not\nidentify the plugin or the operating systems that are affected.",
+        "scope": "UNKNOWN"
+      },
+      {
+        "id": "fixed",
+        "quote": "The issue affects some optional plugin configurations. The advisory does not\nidentify the plugin or the operating systems that are affected.",
+        "scope": "UNKNOWN"
+      },
+      {
+        "id": "branch3",
+        "quote": "The issue affects some optional plugin configurations. The advisory does not\nidentify the plugin or the operating systems that are affected.",
+        "scope": "UNKNOWN"
+      },
+      {
+        "id": "excluded",
+        "quote": "The issue affects some optional plugin configurations. The advisory does not\nidentify the plugin or the operating systems that are affected.",
+        "scope": "UNKNOWN"
+      }
+    ],
+    "range_quote": "AsterCache is affected from 2.4.0 up to but not including 2.4.7. This is the\ncomplete affected stable release range.",
+    "ranges": [
+      {
+        "lower": "2.4.0",
+        "lower_inclusive": true,
+        "upper": "2.4.7",
+        "upper_inclusive": false
+      }
+    ]
+  },
+  "items": [
+    {
+      "id": "lower",
+      "matched_ranges": [],
+      "status": "INCOMPLETE",
+      "version": "2.4.0"
+    },
+    {
+      "id": "fixed",
+      "matched_ranges": [],
+      "status": "INCOMPLETE",
+      "version": "2.4.7"
+    },
+    {
+      "id": "branch3",
+      "matched_ranges": [],
+      "status": "INCOMPLETE",
+      "version": "3.0.2"
+    },
+    {
+      "id": "excluded",
+      "matched_ranges": [],
+      "status": "INCOMPLETE",
+      "version": "3.0.1"
+    }
+  ],
+  "policy_sha256": "eab426fc2264ace1bbe56474624598cf10b2a3fe1af656ca5dbd55f56804dac1"
+}
